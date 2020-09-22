@@ -1,0 +1,31 @@
+REGEDIT4
+
+;
+; Hullo peoples who have become inquisitive - here's another registry file, you
+; just need to rename it to a .reg file.
+; This one has a few more keys in it that are kinda fun to play with ;)
+; I'm still working on the stuff for the shell system folders... like recycle bin, etc.
+;
+
+
+; ------ FOR YOUR OWN DLL'S -------------------------------------------------------------
+; Replace {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} with a valid Classid entry for your dll.
+; Also replace the * with the correct place you want it in, and the name of the
+; context handler. Usually this stuff is done in a setup program, or by the exe itself.
+; ---------------------------------------------------------------------------------------
+[HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\VBContext]
+@="{23FCFE69-A54B-11D4-8AD0-484C000107C0}"
+
+[HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\VBContext]
+@="{23FCFE69-A54B-11D4-8AD0-484C000107C0}"
+
+; I'm not so sure about these ones, but use them if you like
+;[HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\VBContext]
+;@="{23FCFE69-A54B-11D4-8AD0-484C000107C0}"
+;[HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\VBContext]
+;@="{23FCFE69-A54B-11D4-8AD0-484C000107C0}"
+;[HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\VBContext]
+;@="{23FCFE69-A54B-11D4-8AD0-484C000107C0}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved]
+"{23FCFE69-A54B-11D4-8AD0-484C000107C0}"="VB Context Menu"
