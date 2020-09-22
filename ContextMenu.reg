@@ -1,0 +1,14 @@
+REGEDIT4
+
+; ------ FOR YOUR OWN DLL'S -------------------------------------------------------------
+; Replace {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} with a valid Classid entry for your dll.
+; Also replace the * with the correct place you want it in, and the name of the
+; context handler. Usually this stuff is done in a setup program, or by the exe itself.
+; ---------------------------------------------------------------------------------------
+[HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\VBContext]
+@="{4A657346-4C64-439B-8A09-E13CE0F7114F}"
+
+; This line makes it so that your DLL is registered for Windows NT.
+; Again, change around to your details
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved]
+"{4A657346-4C64-439B-8A09-E13CE0F7114F}"="VB Context Menu"
